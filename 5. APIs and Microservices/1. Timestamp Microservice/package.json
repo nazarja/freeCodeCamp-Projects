@@ -1,0 +1,17 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "'freeCodeCamp BackEnd Challange - TimeStamp MicroService'",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Sean Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "engines": {
+    "node": "v4.4.5"
+  }
+}

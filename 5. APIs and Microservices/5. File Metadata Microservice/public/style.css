@@ -1,0 +1,114 @@
+/********************************
+    Google Fonts
+*********************************/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Special+Elite');
+
+/********************************
+    General
+*********************************/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin-top: 5%;
+    margin-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Special Elite', sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: #3661A2;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.main-container {
+    margin-top: 7.5%;
+    padding-left: 5%;
+}
+
+h2, h3 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+li {
+    list-style-type: square;
+}
+
+form {
+    margin-left: 23%;
+    margin-top: 7.5%;
+}
+
+.custom-file-input-box {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.custom-file-input-box input[type="file"]{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    zoom: 1;  /* Fix for IE7 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.btn  {
+    display: inline;
+    text-align: center;
+}
+
+#text {
+    top: -38px;
+    left: 0;
+    width: 500px;
+    border: 1px solid grey;
+    height: 38px;
+    border-radius: 5px;
+    vertical-align: bottom;
+    padding-left: 5%;
+}
+
+#upload {
+    width: 70%;
+    display: block;
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #text {
+        margin-top: 15px;
+        width: 100%;
+    } 
+    
+    #upload {
+        width: 92%;
+    }
+
+    form {
+        margin-left: 15%;
+        margin-top: 7.5%;
+    }
+}

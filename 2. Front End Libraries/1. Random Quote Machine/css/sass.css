@@ -1,0 +1,96 @@
+/***********************************
+   Variables
+************************************/
+/***********************************
+   Fonts
+************************************/
+@import url("https://fonts.googleapis.com/css?family=Asul");
+/***********************************
+   General
+************************************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  text-align: center;
+  font-family: "Asul", verdana, sans-serif; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s; }
+
+/***********************************
+   Qoute Box 
+************************************/
+#quote-box {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.25);
+  max-width: 900px;
+  min-height: 250px;
+  padding: 50px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s; }
+  #quote-box #text {
+    font-size: 1.8em; }
+  #quote-box #author {
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: right;
+    padding: 25px 0; }
+  #quote-box #new-quote {
+    float: right;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: #f5f5f5;
+    font-size: 1.3em;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    outline: none; }
+    #quote-box #new-quote:hover {
+      cursor: pointer;
+      opacity: 0.8; }
+  #quote-box #clickables {
+    padding-bottom: 25px; }
+
+/***********************************
+   Twitter
+************************************/
+#tweet-quote {
+  position: relative; }
+  #tweet-quote .fa-twitter {
+    color: #1da1f3;
+    cursor: pointer;
+    float: left;
+    font-size: 2em; }
+
+/***********************************
+   Footer
+************************************/
+#designed-by {
+  margin-top: 50px;
+  color: #f5f5f5;
+  font-size: 1em; }
+  #designed-by a {
+    color: #f5f5f5;
+    text-decoration: none;
+    -webkit-transition: 0.6s;
+    transition: 0.6s; }
+    #designed-by a:hover {
+      text-decoration: underline; }

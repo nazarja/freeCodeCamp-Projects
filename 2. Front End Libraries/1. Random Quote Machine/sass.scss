@@ -1,0 +1,107 @@
+/***********************************
+   Variables
+************************************/
+$white: #f5f5f5;
+$main-font: 'Asul', verdana, sans-serif;
+$main-transition: 0.6s;
+
+
+
+/***********************************
+   Fonts
+************************************/
+@import url('https://fonts.googleapis.com/css?family=Asul');
+
+/***********************************
+   General
+************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    text-align: center;
+    font-family: $main-font;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $main-transition;
+}
+
+
+/***********************************
+   Qoute Box 
+************************************/
+#quote-box {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px 3px rgba(0,0,0,0.25);
+    max-width: 900px;
+    min-height: 250px;
+    padding: 50px;
+    transition: $main-transition;
+    #text {
+        font-size: 1.8em;
+    }
+    #author {
+        font-style: italic;
+        font-size: 1.2em;
+        text-align: right;
+        padding: 25px 0;
+    }
+    #new-quote {
+        float: right;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px; 
+        color: $white;
+        font-size: 1.3em;
+        transition: $main-transition;
+        outline: none;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        } 
+    }
+    #clickables {
+        padding-bottom: 25px;
+    }
+}
+
+
+/***********************************
+   Twitter
+************************************/
+#tweet-quote {
+    position: relative;
+    .fa-twitter {
+        color: #1da1f3;
+        cursor: pointer;
+        float: left;
+        font-size: 2em;
+    }
+}
+
+
+
+/***********************************
+   Footer
+************************************/
+#designed-by {
+    margin-top: 50px;
+    color: $white;
+    font-size: 1em;
+    a {
+        color: $white;
+        text-decoration: none;
+        transition: $main-transition;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

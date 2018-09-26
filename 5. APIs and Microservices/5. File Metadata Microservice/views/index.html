@@ -1,0 +1,71 @@
+<doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8" lang="en">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="/style.css"> 
+            <title>File Metadata Microservice</title>
+        </head>
+        <body>
+                <div class="container">
+                        <h1>File Metadata Microservice</h1>
+
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <div class="custom-file-input-box">
+                                <input type="button" value="Browse.." class="btn btn-primary">
+                                <input type="file"  id="file" name="uploadedFile">
+                                <input type="text" id="text">
+                            </div>
+                            <input type="submit" class="btn btn-success disabled"  value="Upload file to server.." id="upload">
+                        </form>
+                        
+                        <div class="main-container">
+                            <h2>A freeCodeCamp Javascript Back-End Challange</h2>
+                            <blockquote>
+                                <p>This challange makes use of NodeJS , ExpressJS and the  npm multer module.</p>
+                            </blockquote>
+                            <blockquote>
+                                <p><strong>Challange:</strong><br/>
+                                    <ul>
+                                        <li>
+                                            To be able to submit a FormData object that includes a file upload.
+                                        </li>
+                                        <li>
+                                            When a file is uploaded, A JSON response with the file size in bytes will be returned.
+                                        </li>
+                                    </ul>
+                                </p> 
+                            </blockquote>         
+                            <h3>Usage:</h3>
+                            <p>You will need to select a file from your computer or device in order for the file metadata to be read.</p>
+                            <h3>Output:</h3>
+                            <code>
+                                    {
+                                      "File Size MB": 14
+                                    }
+                            </code>
+                        </div>
+                </div>
+                <footer>
+                    <p>Code and Design by <a href="http://seanmurphy.eu/" target="_blank">Sean Murphy</a></p>
+                </footer>
+                <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                <script type="text/javascript">
+                    var file = document.querySelector("#file");
+                    var text = document.querySelector("#text");
+                    var upload = document.querySelector("#upload");
+                    file.addEventListener("change", () => {
+                        var value = file.value.split("\\" || "/");
+                        var length = value.length;
+                        var path = value.slice(length - 1);
+                        text.value = path.toString();
+                        upload.classList.toggle('disabled');
+                    });
+                </script>
+        </body>
+    </html>
+</doctype>

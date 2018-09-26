@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <main>
+        <!-- Title -->
+        <h1 id="title">Survey Form</h1>
+
+        <!-- Form -->
+        <form id="survey-form">
+            <!-- Description -->
+            <p id="description">Video Game Survey</p>
+            <div id="blocka">
+                <!-- Name -->
+                <label id="name-label" for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <!-- Email -->
+                <label id="email-label" for="email">Email:</label>
+                <input type="email" id="email"  name="email" placeholder="Enter your email adddress" required>
+                <!-- Age / Number -->
+                <label id="number-label" for="number">Age:</label>
+                <input type="number" id="number" name="number" min="0" max="100"  placeholder="0">
+            </div>
+            
+            <!-- Dropdown Select Options -->
+            <label for="dropdown" class="bold">Do you prefer to buy games online or in a store?</label>
+            <select id="dropdown" name="dropdown">
+                <option value="" disabled>Select an option</option>
+                <option value="Online">Online</option>
+                <option value="In Store">In Store</option>
+                <option value="Both">Both</option>
+                <option value="No preference">No preference</option>
+            </select>
+            
+            <div id="blockb">
+                <!-- Radio Buttons -->
+                <p class="bold">How many games on average do you buy per year?</p>
+                <ul id="radio-field">
+                    <li>
+                        <input type="radio" name="radio" value="0-15">
+                        <label>0-5</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" value="6-10">
+                        <label>6-10</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" value="11-15">
+                        <label>11-15</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" value="Too Many">
+                        <label>Too Many!</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" value="I dont buy them myself.">
+                        <label>I dont buy them myself.</label>
+                    </li>
+                </ul>
+            
+                <!-- Checkboxes -->
+                <p class="bold space">What game platforms do you use? (check all that apply)</p>
+                <ul id="checkbox-field">
+                    <li>
+                        <input type="checkbox" name="checkbox" value="xbox one">
+                        <label>Xbox One</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox" value="playstation 4">
+                        <label>Playstation 4</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox" value="nintendo">
+                        <label>Nintendo</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox" value="Personal Computer">
+                        <label>Personal Computer</label>
+                    </li>
+                </ul>
+
+                <!-- TextArea -->
+                <label for="textarea" class="bold space">Comments:</label>
+                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Add any additional comments here"></textarea>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+        <footer>
+            <p>Code and Design by <a href="http://seanmurphy.eu">Sean Murphy</a></p>
+        </footer>
+    </main>
+    
+    <!-- JavaScript -->
+    <!-- <script src="main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>

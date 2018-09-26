@@ -1,0 +1,78 @@
+<doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <link rel="stylesheet" href="style.css"> 
+            <title>Exercise Tracker Microservice</title>
+        </head>
+        <body>
+                <div class="container">
+                        <h1>Exercise Tracker Microservice</h1>
+                        <div class="main-container">
+                            <h2>A freeCodeCamp Javascript Back-End Challange</h2>
+                            <blockquote>
+                                <p>This challange makes use of NodeJS, ExpressJS and MongoDB with Mongoose.</p>
+                            </blockquote>
+                            <blockquote>
+                                <p><strong>Challange:</strong><br/>
+                                    <ul>
+                                        <li>
+                                            I can <strong>create</strong> a user with the <code>POST</code> method from a form to <code>/api/exercise/new-user</code> and will return an <strong>object</strong> with the username and unique <code>_id</code>.
+                                        </li>
+                                        <li>
+                                            I can <strong>add</strong> an exercise to <strong>any user</strong> with the <code>POST</code>method from a form to <code>/api/exercise/add</code> and will then return the user <strong>object</strong> with the exercise fields added.
+                                        </li>
+                                        <li>
+                                            I can return an array of <strong>all users</strong> at the endpoint <code>api/exercise/users</code>.
+                                        </li>
+                                        <li>
+                                            I can <code>GET</code> a <strong>full exercise log</strong> of any user at <code>/api/exercise/log?</code> with a parameter of the <code>username</code> or the unique <code>_id</code>.
+                                        </li>
+                                    </ul>
+                                </p> 
+                            </blockquote>
+                            <!-- FreeCodeCamp BoilerPlate -->
+                            <div class="container">
+                                <form action="/api/exercise/new-user" method="post">
+                                    <h3>Create a New User</h3>
+                                    <p><code>POST /api/exercise/new-user</code></p>
+                                    <input id="username" type="text" name="username" placeholder=" Username">
+                                    <input type="submit" value="Submit">
+                                </form>
+                                <br />
+                                <form action="/api/exercise/add" method="post">
+                                    <h3>Add Exercises to an Existing User</h3>
+                                    <p><code>POST /api/exercise/add</code></p>
+                                    <input id="username" type="text" name="username" placeholder=" Username or _id">
+                                    <input id="description" type="text" name="description" placeholder=" Description">
+                                    <input id="duration" type="text" name="duration" placeholder=" Duration (mins)">
+                                    <input id="date" type="text" name="date" placeholder=" Date: format (yyyy-mm-dd)">
+                                    <input type="submit" value="Submit">
+                                </form>
+                            </div>
+                            <div>
+                                <h3><code>GET</code> Usage Examples:</h3>
+                                <code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code>
+                                <br />
+                                <code>Click me: <a href="http://localhost:3000/api/exercise/users">http://localhost:3000/api/exercise/users</a> GET All Users</code><br/>
+                                <code>Click me: <a href="http://localhost:3000/api/exercise/log?userId=nazarja">http://localhost:3000/api/exercise/log?userId={userId}</a> GET User Log</code><br/>
+                                <code>Click me: <a href="http://localhost:3000/api/exercise/log?userId=nazarja&from=2011-02-01&to=2011-02-02&limit=2">http://localhost:3000/api/exercise/log?userId=nazarja&from=2011-02-01&to=2011-02-02limit=2</a> GET User Log</code><br/>
+                                <code>Click me: <a href="http://localhost:3000/api/exercise/log?userId=nazarja&from=2011-02-02&to=2011-02-03&limit=2">http://localhost:3000/api/exercise/log?userId=nazarja&from=2011-02-02&to=2011-02-03limit=2</a> GET User Log</code><br/>
+                                <br />
+                                <p>
+                                    <strong>{ }</strong> = required,
+                                    <strong>[ ]</strong> = optional</p>
+                                <p>
+                                    <strong>from, to</strong> = dates (yyyy-mm-dd);
+                                    <strong>limit</strong> = number
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <footer>
+                    <p>Code and Design by <a href="http://seanmurphy.eu/" target="_blank">Sean Murphy</a></p>
+                </footer>
+        </body>
+    </html>

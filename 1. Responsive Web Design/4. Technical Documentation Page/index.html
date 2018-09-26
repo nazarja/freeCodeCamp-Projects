@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>Technical Documentation Page</title>
+    <style>
+        @media (min-width: 0px) {
+           body {
+               background-color: #fff;
+           }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div id="menu-bar">
+        <div id="hamburger-menu">
+            <div class="burger-icon"></div>
+            <div class="burger-icon"></div>
+            <div class="burger-icon"></div>
+        </div>
+        <div id="heading">
+            <h1>Type<span style="font-weight: lighter;">Script Guide</span></h1>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <header>Tutorial Documentation</header>
+        <a href="#Installing_TypeScript" class="nav-link">Installing TypeScript</a>
+        <a href="#Building_your_first_TypeScript_file" class="nav-link">Building your first TypeScript file</a>
+        <a href="#Compiling_your_code" class="nav-link">Compiling your code</a>
+        <a href="#Type_annotations" class="nav-link">Type annotations</a>
+        <a href="#Interfaces" class="nav-link">Interfaces</a>
+        <a href="#Classes" class="nav-link">Classes</a>
+        <a href="#Running_your_TypeScript_web_app" class="nav-link">Running your TypeScript web app</a>
+    </nav>
+    
+    <!--  Main Doc -->
+    <main id="main-doc">
+        
+        <!-- Section -->
+        <section class="main-section" id="Installing_TypeScript">
+            <header  style="padding-top: 0">Installing TypeScript</header>
+            <p>There are two main ways to get the TypeScript tools:</p>
+            <li>Via npm (the Node.js package manager)</li>
+            <li>By installing TypeScript’s Visual Studio plugins</li>
+            <p>
+                Visual Studio 2017 and Visual Studio 2015 Update 3 include TypeScript by default. If you didn’t install TypeScript with Visual
+                Studio, you can still<a href="https://www.typescriptlang.org/#download-links">download it.</a>
+            </p>
+            <figure>
+                <figcaption>For NPM users:</figcaption>
+                <pre class="prettyprint language-js" style="padding: 2px;position: relative;max-width: 95%;padding-left: 20px;">
+                    <code>
+> npm install -g typescript
+                    </code>
+                </pre>
+            </figure>
+        </section>
+
+        <!-- Section -->
+        <section class="main-section" id="Building_your_first_TypeScript_file">
+            <header>Building your first TypeScript file</header>
+            <p>Let’s get started by building a simple web application with TypeScript.</p>
+            <p>In your editor, type the following JavaScript code in <span class="color-code">greeter.ts:</span></p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px;position: relative;max-width: 95%;padding-left: 20px;">
+                    <code>
+function greeter(person) {
+    return "Hello, " + person;
+}
+
+let user = "Jane User";
+
+document.body.innerHTML = greeter(user);
+                    </code>
+                </pre>
+            </figure>
+        </section>
+
+        <!-- Section -->
+        <section class="main-section" id="Compiling_your_code">
+            <header>Compiling your code</header>
+            <p>We used a <span class="color-code">.ts</span> extension, but this code is just JavaScript. You could have copy/pasted this straight out of an existing JavaScript app.</p>
+            <p>At the command line, run the TypeScript compiler:</p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px;position: relative;max-width: 95%;padding-left: 20px;">
+                    <code>
+tsc greeter.ts
+                    </code>
+                </pre>
+            </figure>
+            <p>
+                The result will be a file <span class="color-code">greeter.js</span> which contains the same JavaScript that you fed in. We’re up and running using TypeScript
+                in our JavaScript app!
+            </p>
+            <p>
+                Now we can start taking advantage of some of the new tools TypeScript offers. Add a <span class="color-code">: string</span> type annotation to the ‘person’
+                function argument as shown here:
+            </p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px;position: relative;max-width: 95%;padding-left: 20px;">
+                    <code>
+function greeter(person: string) {
+    return "Hello, " + person;
+}
+
+let user = "Jane User";
+
+document.body.innerHTML = greeter(user);
+                    </code>
+                </pre>
+            </figure>
+        </section>
+
+        <!-- Section -->
+        <section class="main-section" id="Type_annotations">
+            <header>Type annotations</header>
+            <p>
+                Type annotations in TypeScript are lightweight ways to record the intended contract of the function or variable. In this
+                case, we intend the greeter function to be called with a single string parameter. We can try changing the call greeter to
+                pass an array instead:
+            </p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px;position: relative;max-width: 95%;padding-left: 20px;">
+                    <code>
+function greeter(person: string) {
+    return "Hello, " + person;
+}
+
+let user = [0, 1, 2];
+
+document.body.innerHTML = greeter(user);
+                    </code>
+                </pre>
+            </figure>
+            <p>Re-compiling, you’ll now see an error:</p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px 0 0 20px;position: relative;max-width: 95%;">
+                    <code>
+error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
+                    </code>
+                </pre>
+            </figure>
+            <p>
+                Similarly, try removing all the arguments to the greeter call. TypeScript will let you know that you have called this function
+                with an unexpected number of parameters. In both cases, TypeScript can offer static analysis based on both the structure
+                of your code, and the type annotations you provide.
+            </p>
+            <p>
+                Notice that although there were errors, the <span class="color-code">greeter.js</span> file is still created. You can use TypeScript even if there are errors
+                in your code. But in this case, TypeScript is warning that your code will likely not run as expected.
+            </p>
+        </section>
+
+        <!-- Section -->
+        <section class="main-section" id="Interfaces">
+            <header>Interfaces</header>
+            <p>
+                Let’s develop our sample further. Here we use an interface that describes objects that have a firstName and lastName field.
+            </p>
+            <p>
+                In TypeScript, two types are compatible if their internal structure is compatible. This allows us to implement an interface
+                just by having the shape the interface requires, without an <span class="color-code">explicit</span> implements clause.
+            </p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px 0 0 20px;position: relative;max-width: 95%;">
+                    <code>
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = { firstName: "Jane", lastName: "User" };
+
+document.body.innerHTML = greeter(user);
+                        </code>
+                    </pre>
+            </figure>
+        </section>
+
+        <!-- Section -->
+        <section class="main-section" id="Classes">
+            <header>Classes</header>
+            <p>
+                Finally, let’s extend the example one last time with classes. TypeScript supports new features in JavaScript, like support
+                for class-based object-oriented programming.
+            </p>
+            <p>
+                Here we’re going to create a <span class="color-code">Student</span> class with a constructor and a few public
+                fields. Notice that classes and interfaces play well together, letting the programmer decide on the right level of abstraction.
+            </p>
+            <p>
+                Of note, the use of <span class="color-code">public</span> on arguments to the constructor is a shorthand that allows us to automatically create properties
+                with that name.
+            </p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px 0 0 20px;position: relative;max-width: 95%;">
+                    <code>
+class Student {
+    fullName: string;
+    constructor(public firstName: string, public middleInitial: string, public lastName: string) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+}
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person : Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = new Student("Jane", "M.", "User");
+
+document.body.innerHTML = greeter(user);
+                    </code>
+                </pre>
+            </figure>
+            <p>
+                Re-run tsc <span class="color-code">greeter.ts</span> and you’ll see the generated JavaScript is the same as the earlier code. Classes in TypeScript are
+                just a shorthand for the same prototype-based OO that is frequently used in JavaScript
+            </p>
+        </section>
+
+        <!-- Section -->
+        <section class="main-section" id="Running_your_TypeScript_web_app">
+            <header>Running your TypeScript web app</header>
+            <p>Now type the following in <span class="color-code">greeter.html:</span></p>
+            <figure>
+                <pre class="prettyprint language-js" style="padding: 2px 0 0 20px;position: relative;max-width: 95%;">
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+     &lt;title&gt;TypeScript Greeter&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+     &lt;script src="greeter.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                    </code>
+                </pre>
+            </figure>
+            <p>Open <span class="color-code">greeter.html</span> in the browser to run your first simple TypeScript web application!</p>
+            <p><span class="color-code">Optional:</span></p>
+            <li>Open greeter.ts in Visual Studio, or copy the code into the TypeScript playground. You can hover over identifiers to see their types.</li>
+            <li>Re-type the last line, and see completion lists and parameter help based on the types of the DOM elements.</li>
+            <li>Put your cursor on the reference to the greeter function, and hit F12 to go to its definition.</li>
+            <p>
+                The type information provided works together with the tools to work with JavaScript at application scale. For more examples
+                of what’s possible in TypeScript, see the Samples section of the website.
+            </p>
+        </section>
+
+        <!-- Overlay to Darken main content when mobile menu is opened -->
+        <div id="darken"></div>
+    </main>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <!-- <script src="https://rawgit.com/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+/******** Google Fonts *********/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+
+/******** General *********/
+body {
+    font-family: 'Lato', sans-serif;
+}
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 900px) {
+    main {
+        height: auto;
+        width: auto;
+        display: block;
+        padding-top: 15%;
+        align-items: left;
+        justify-content: left;
+    }
+}
+
+
+/******** SVG Container *********/
+svg {
+    stroke: 1px solid #333;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+}
+svg rect {
+    fill: steelblue;
+}
+svg rect:hover {
+    fill: #444;
+}
+
+
+
+/******** Text *********/
+#title {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+#heading {
+    font-size: 1.2em;
+}
+#sub-heading {
+    font-size: 0.8em;
+}
+.info {
+    font-size: 0.55em;
+}
+
+
+/******** Tooltip *********/
+
+#tooltip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 rgba(31, 31, 31, 0.6);
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 14px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 1px 1px 20px rgba(31, 31, 31, 0.6);
+}

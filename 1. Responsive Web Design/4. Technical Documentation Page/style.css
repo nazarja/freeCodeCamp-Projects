@@ -1,0 +1,157 @@
+
+/************** General **************/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555;
+    margin: 0;
+    padding: 0;
+}
+nav, main {
+    padding: 25px;
+    transition: 0.4s;
+}
+nav {
+    position: fixed;
+    top: 0px;
+    left: -310px;
+    width: 260px;
+    height: 100%;
+    z-index: 10; 
+    background-color: #f8f8f8;
+    padding-top: 89px;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.3)
+}
+main {
+    position: relative;
+    top: 64px;
+    width: calc(100% - 50px);
+}
+header {
+    color: #152740;
+}
+
+/************** Hamburger Menu **************/
+#menu-bar {
+    width: 100%;
+    background-color: #294E80;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    height: 64px;
+}
+#hamburger-menu, #heading {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+}
+#hamburger-menu {
+    min-height: 64px;
+    width: 64px;
+    cursor: pointer;
+}
+#hamburger-menu:hover {
+    background-color: #152740;
+}
+.burger-icon {
+    position: relative;
+    top: 25px;
+    left: 10px;
+    height: 2.5px;
+    width: 20px;
+    border-radius: 2.5px;
+    background-color: #fff;
+    display: block;
+    margin-top: 2.5px;
+}
+#heading {
+    color: #fff;
+    font-size: .7em;
+    padding: 0;
+}
+#darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/************** Navagation Menu **************/
+nav * {
+    display: block;
+}
+nav header {
+    color: #294E80;
+}
+a {
+    padding: 10px;
+    text-decoration: underline #ccc;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover {
+    color: #294E80;
+    text-decoration: underline #294E80;
+    background-color: #ddd;
+    border-radius: 2px;
+}
+
+/************** Main Styles **************/
+section header {
+    font-size: 1.3em;
+    letter-spacing: -.5px;
+    padding-top: 5px;
+}
+li {
+    margin-left: 15px;
+}
+.color-code {
+    color: #BF414A;
+}
+
+/************** Code Blocks **************/
+figure, pre, code {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px
+}
+pre, code {
+    position: relative;
+    padding-left: 5px;
+    width: 100%;
+}
+figcaption {
+    color: #294E80;
+    padding: 10px 5px;
+}
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+}
+pre.prettyprint {
+    border-radius: 2px;
+    background-color: #f5f5f5;
+    word-wrap: break-word;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        left: 0;
+    }
+    main {
+        left: 310px;
+        padding-left: 50px;
+        width: calc(100% - 385px)
+    }
+    code, pre, code, p {
+        width: 70%;
+    }
+
+}
+

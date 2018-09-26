@@ -1,0 +1,64 @@
+<doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/style.css"> 
+            <title>Unix Timestamp Microservice</title>
+        </head>
+        <body>
+                <div class="container">
+                        <h1>Unix Timestamp Microservice</h1>
+                        <div class="main-container">
+                            <h2>A freeCodeCamp Javascript Back-End Challange</h2>
+                            <blockquote>
+                                <p>This challange makes use of NodeJS and ExpressJS</p>
+                            </blockquote>
+                            <blockquote>
+                                <p><strong>Challange:</strong><br/>
+                                    <ul>
+                                        <li>
+                                            Given either a <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank">Unix (Epoch) Timestamp</a> or a <a href="https://en.wikipedia.org/wiki/Calendar_date" target="_blank">natural date</a> within the url of this page.
+                                        </li>
+                                        <li>
+                                            A JSON object is returned with both the <span style="color: red">unix timestamp</span> and the <span style="color: red">natural language</span> form 
+                                          of that date.
+                                        </li>
+                                        <li>I
+                                            f an Invalid date is entered the JSON object will return <span style="color: darkorange">null</span>.
+                                        </li>
+                                    </ul>
+                                </p> 
+                            </blockquote>         
+                            <h3>Usage:</h3>
+                            <p>In the url bar you can enter either a natural language date or a unix timestamp:</p>
+                            <p><strong>Examples:</strong></p>
+                            <code>Click me: <a href="http://localhost:8080/April%2015,%202017">http://localhost:8080/April%2015,%202017</a></code><br/>
+                            <code>Click me: <a href="http://localhost:8080/December 10, 2145">http://localhost:8080/December 10, 2145</a></code><br/>
+                            <code>Click me: <a href="http://localhost:8080/3 Feb,1988">http://localhost:8080/3 Feb, 1988</a></code><br/>
+                            <code>Click me: <a href="http://localhost:8080/1492210800">http://localhost:8080/1492210800</a></code><br/>
+                            <code>Click me: <a href="http://localhost:8080/5552223333">http://localhost:8080/5552223333</a></code><br/>
+                            <code>Click me: <a href="http://localhost:8080/570844800">http://localhost:8080/570844800</a></code>
+                            <h3>Output:</h3>
+                            <code>
+                                    {
+                                      "unix": 1450137600,
+                                      "natural": "April 15, 2017"
+                                    }
+                            </code>
+                            <br/>
+                            <code>
+                                    {
+                                      "unix": null,
+                                      "natural": null
+                                    }
+                                </code>
+                        </div>
+                </div>
+                <footer>
+                    <p>Code and Design by <a href="http://seanmurphy.eu/" target="_blank">Sean Murphy</a></p>
+                </footer>
+            <script src="/js/index.js"></script>
+        </body>
+    </html>

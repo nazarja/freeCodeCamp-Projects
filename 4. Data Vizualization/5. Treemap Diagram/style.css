@@ -1,0 +1,65 @@
+
+/******** General *********/
+@import url('https://fonts.googleapis.com/css?family=Lato|Ubuntu');
+
+/******* General *******/
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+svg {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+
+/******* Text *******/
+#heading {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#title {
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+}
+#description {
+    font-size: 0.9em;
+    font-family: 'Lato', sans-serif;
+
+}
+.legend-text {
+    font-size: 0.8em;
+}
+.tile {
+    color: #fff;
+}
+.tile-text {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+.tile-value {
+    font-size: 0.7em;
+}
+
+/******** Tooltip *********/
+#tooltip {
+    position: absolute;
+    display: none;
+    min-width: 80px;
+    height: auto;
+    color: #333;
+    font-family: 'Ubuntu', sans-serif;
+    background: none repeat scroll 0 0 rgba(249, 249, 229, 0.9);
+    border: 1px solid #333;
+    line-height: 1.4em;
+    border-radius: 5px;
+    padding: 14px;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 1px 1px 20px rgba(31, 31, 31, 0.6);
+}

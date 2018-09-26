@@ -1,0 +1,17 @@
+{
+  "name": "exercise-tracker",
+  "version": "1.0.0",
+  "description": "A freeCodeCamp Project to create an Exercise Tracker API Microservice",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Sean Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.15.4",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.1.5"
+  }
+}

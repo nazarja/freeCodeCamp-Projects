@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="icon" href="./images/favicon.png">
+    <title>Sean Murphy | Portfolio</title>
+</head>
+<body>
+
+
+    <!-- SubMenu -->
+    <div id="submenu">
+        <ul>
+            <li><a class="nav-link" href="#about-heading">ABOUT</a></li>
+            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link" href="#certificates-section">CERTIFICATES</a></li>
+            <li><a class="nav-link" href="#contact-section">CONTACT</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div id="menu">
+            <div class="menu-disc"></div>
+            <div class="menu-disc"></div>
+            <div class="menu-disc"></div>
+        </div>
+        <span id="logo">Sean Murphy</span>
+        <ul id="nav-links">
+             <li><a class="nav-link" href="#about-heading">ABOUT</a></li>
+            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link" href="#certificates-section">CERTIFICATES</a></li>
+            <li><a class="nav-link" href="#contact-section">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+            <h1>SEAN MURPHY | JavaScript Developer</h1>
+            <p>"Hi, I'm <strong class="blue">Sean</strong>. <br/>An aspiring Full Stack Developer. <br /> I love <strong class="coffee">coffee</strong> and <strong class="blue">code</strong>."</p>
+            <div id="view-portfolio"><a href="#projects" class="nav-link">View My Portfolio</a></div>
+            <a href="#projects" id="angle-down"><i class="fas fa-angle-down"></i></a>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <hr id="projects-hr" align="left" style="border: 2px solid; width: 50px; margin-bottom: 25px;"/>
+        <ul class="projects-nav">
+            <li id="active" class="Featured">Featured</li>
+            <li class="ResponsiveWebDesign">Responsive Web Design</li>
+            <li class="FrontEndLibraries">Front End Libraries</li>
+            <li class="DataVisualization">Data Visualization</li>
+            <li class="ApisAndMicroservices">APIs &amp; Microservices</li>
+            <li class="ReactJS">ReactJS</li>
+            <!-- <li class="InformationSecurityAndQualityAssurance">Information Security &amp; Quality Assurance</li> -->
+        </ul>
+        <div id="projects-list">
+
+        </div>
+    </section>
+    
+    <div id="about-heading">
+        <h2>About me</h2>
+        <hr align="left" style="border: 2px solid; width: 50px; margin-bottom: 25px;" />
+    </div>
+
+    <!-- About Section -->
+    <section id="about-section" class="common-section">
+        <div id="about">
+            <div id="profile-picture">
+                <img src="./images/profilepicture.jpg" alt="Profile Picture">
+            </div>
+
+            <div id="profile-section">
+                <h3>Sean Murphy</h3>
+                <!-- Profile Links -->
+                <div id="profile-links">
+                    <a class="profile-link" href="https://github.com/nazarja" target="_blank"><i class="fab fa-github"></i>Github</a>
+                    <a class="profile-link" href="https://www.linkedin.com/in/sean-murphy-283672135" target="_blank"><i class="fab fa-linkedin-in"></i>Linkedin</a>
+                    <a class="profile-link" id="profile-link" href="https://www.freecodecamp.org/nazarja" target="_blank"><i class="fab fa-free-code-camp"></i>FreeCodeCamp</a>
+                    <a class="profile-link" href="https://codepen.io/Nazarja" target="_blank"><i class="fab fa-codepen"></i>Codepen</a>
+                </div>
+                <!-- Skills List -->
+                <div id="skills-list"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Text -->
+    <section id="about-text-section" class="common-section">
+        <p>
+           I've been learning <strong>JavaScript</strong> and <strong>Web Development</strong> since January 2017 and I'm currently seeking a <strong>Junior Developer</strong> Position.
+           I've earned a number of <strong>Certificates</strong> on the <strong>FreeCodeCamp</strong> developer program and was recently awarded a <strong>Google Scholarship</strong> with Udacity where I completed a <strong>Mobile Web Specialist Nanodegree</strong>.
+        </p>
+        <p>
+           I'm continuously learning new <strong>skills</strong> and my current <strong>goal</strong> is to increase my <strong>full stack</strong> knowledge. 
+           I'm currently <strong>available</strong> for work and would love to talk to you about an <strong>opportunity</strong>. Get in touch with me!
+        </p>
+    </section>
+    
+
+    <!-- Certificates Section -->
+    <section id="certificates-section" class="common-section">
+        <h3><span id="numberOfCerts"></span>Certificates / Achivements</h3>
+        <div id="certificates"></div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+        <div id="form-div">
+            <h3 class="white">Send me a email...</h3>
+            <hr id="hr-contact" align="left" />
+            <form id="form"  action="form-to-email.php" method="POST" name="myemailform">
+                    <!-- Name -->
+                    <label for="name">Name</label>
+                    <input class="input" type="text" name="name" required>
+                    <!-- Email -->
+                    <label for="email">Email</label>
+                    <input class="input"type="email" name="email" required>
+                    <!-- Subject -->
+                    <label for="subject">Subject</label>
+                    <input class="input"type="text" name="subject" required>
+                    <!-- Message -->
+                    <label for="text-area">Message</label>
+                    <textarea  type="text-area" name="message" required></textarea>
+                    <!-- Submit -->
+                    <span id="messageIsSent">Your message has been sent, Thank You.</span>
+                    <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Scroll To Top -->
+    <a id="scroll-to-top" href="#projects"><i class="fas fa-angle-up"></i></a>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Code and Design by <a href="http://seanmurphy.eu"> Sean Murphy</a></p>
+    </footer>
+    
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+    <script src="certificates.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+     <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
+</body>
+</html>
